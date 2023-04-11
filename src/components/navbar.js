@@ -4,6 +4,7 @@ import LBT from '../images/LBT.png';
 import { FaUser, FaSearch } from 'react-icons/fa'
 
 import '../css/App.css';
+import '../css/navbar.css';
 
 const Navbar = () => {
     return ( 

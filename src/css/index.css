@@ -17,3 +17,9 @@ code {
   border: 0;
   padding: 0;
 }
+
+:root {
+  --blue-bg: hsl(244, 53%, 59%);
+  --search-bg: hsl(222, 48%, 95%);
+  --white-font: hsl(0, 0%, 96%);
+}

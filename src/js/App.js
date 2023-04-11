@@ -7,10 +7,11 @@ import Login from '../pages/login';
 import Home from '../pages/home';
 import Signin from '../pages/signin';
 import Footer from '../components/footer';
+import Notfound from '../pages/404';
 
 function App() {
   return (
-    <>
+    <div className='app-container'>
       <Navbar/>
       <Routes>
         <Route
@@ -25,9 +26,13 @@ function App() {
           path={'/cadastro'}
           element={<Signin/>}
         />
+        <Route
+          path={'*'}
+          element={<Notfound/>}
+        />
       </Routes>
       <Footer/>
-    </>
+    </div>
   );
 }
 
