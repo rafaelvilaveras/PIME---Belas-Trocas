@@ -5,19 +5,28 @@
     justify-content: space-around;
 }
 
-.temp {
+.footer-container hr {
+    width: 2px;
+    background-color: var(--white-font);
+}
+
+.l-gap {
     gap: 1rem;
 }
 
+.s-gap {
+    gap: 0.25rem;
+}
+
 .map-container {
-    gap: 1rem;
-    justify-content: center;
+    gap: 2.5rem;
     align-items: center;
 }
 
 .footer-map {
-    width: 50%;
+    width: 20vw;
     height: 20vh;
+    justify-self: end;
 }
 
 .socials {
@@ -41,7 +50,6 @@
 
 .fb-container {
     gap: 1rem;
-    align-items: center;
 }
 
 .f-button {

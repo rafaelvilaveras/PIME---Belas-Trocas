@@ -17,15 +17,18 @@ const Footer = () => {
     return ( 
         <>
             <ul className='flex-row footer-container'>
-                <li className='flex-column temp'>
+                <li className='flex-column l-gap'>
                     <span>Links</span>
-                    <div className='flex-column'>    
+                    <div className='flex-column s-gap'>    
                         <a target='_blank' rel='noopener' className='f-anchor'>Fale conosco</a>
                         <a target='_blank' rel='noopener' className='f-anchor'>FAQ</a>
                         <a target='_blank' rel='noopener' href='https://www.belasartes.br/institucional/' className='f-anchor'>Quem nós somos?</a>
                     </div>
                 </li>
-                <li className='flex-column temp'>
+
+                <hr/>
+
+                <li className='flex-column l-gap'>
                     <span>Acompanhe as novidades</span>
                     <div className='flex-row socials'>
                         <a target='_blank' rel='noopener' href='https://www.facebook.com/belasartes' className='f-anchor'><ImFacebook  className='icons'/></a>
@@ -34,14 +37,20 @@ const Footer = () => {
                         <a target='_blank' rel='noopener' href='https://www.linkedin.com/school/belasartessp/' className='f-anchor'><BsLinkedin  className='icons'/></a>
                     </div>
                 </li>
-                <li className='flex-column temp'>
+
+                <hr/>
+
+                <li className='flex-column l-gap'>
                     <span>Serviço e Privacidade</span>
-                    <div className='flex-column'>                    
+                    <div className='flex-column s-gap'>                    
                         <a target='_blank' rel='noopener' className='f-anchor'>Termos de Serviços</a>
                         <a target='_blank' rel='noopener' className='f-anchor'>Termos de privacidade</a>
                     </div>
                 </li>
-                <li className='flex-column temp'>
+                
+                <hr/>
+
+                <li className='flex-column l-gap'>
                     <span>Localização Campus</span>
                     <div className='flex-row map-container'>
                         <div className=' flex-column fb-container'>
