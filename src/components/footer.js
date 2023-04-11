@@ -43,12 +43,12 @@ const Footer = () => {
                 </li>
                 <li className='flex-column temp'>
                     <span>Localização Campus</span>
-                    <div className='flex-column'>
-                        <div className='flex-row fb-container'>
-                            <button className={ activeMap === 1 ? 'f-button f-active' : 'f-button'} onClick={() => { turnAM(1) }}>Paraíso</button>
-                            <button className={ activeMap === 2 ? 'f-button f-active' : 'f-button'} onClick={() => { turnAM(2) }}>Vila Mariana</button>
-                            <button className={ activeMap === 3 ? 'f-button f-active' : 'f-button'} onClick={() => { turnAM(3) }}>Shop. Cidade Jardim</button>
-                            <button className={ activeMap === 4 ? 'f-button f-active' : 'f-button'} onClick={() => { turnAM(4) }}>Sorocaba-Votorantim</button>
+                    <div className='flex-row map-container'>
+                        <div className=' flex-column fb-container'>
+                            <button className='f-button' onClick={() => { turnAM(1) }}>Paraíso</button>
+                            <button className='f-button' onClick={() => { turnAM(2) }}>Vila Mariana</button>
+                            <button className='f-button' onClick={() => { turnAM(3) }}>Shop. Cidade Jardim</button>
+                            <button className='f-button' onClick={() => { turnAM(4) }}>Sorocaba-Votorantim</button>
                         </div>
                         <iframe src={Pa}  className={ activeMap === 1 ? 'footer-map' : 'display-none'} loading="lazy" ></iframe>
                         <iframe src={VM}  className={ activeMap === 2 ? 'footer-map' : 'display-none'} loading="lazy" ></iframe>
