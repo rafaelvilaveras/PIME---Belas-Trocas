@@ -12,11 +12,27 @@
   flex-direction: column;
 }
 
-/* Retirar o height depois */
+.l-gap {
+  gap: 1rem;
+}
+
+.s-gap {
+  gap: 0.25rem;
+}
 
 .app-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh; 
+}
+
+.cb {
+  padding: 0.35rem 2.25rem;
+  margin-top: 1rem;
+  border-radius: 50px;
+  background-color: var(--purple-button);
+  color: var(--white-font);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
 }

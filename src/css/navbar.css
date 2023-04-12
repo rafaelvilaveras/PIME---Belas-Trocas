@@ -44,11 +44,12 @@
   }
   
   .nav-content p {
+    font-family: var(--page-font-tomorrow);
     font-size: 0.75rem;
   }
   
   .nav-links {
-    color: #f4f4f4;
+    color: var(--white-font);
     font-size: 700;
     text-decoration: none;
     font-weight: bold;

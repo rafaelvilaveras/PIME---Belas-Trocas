@@ -3,19 +3,17 @@
     padding: 1rem;
     box-sizing: border-box;
     justify-content: space-around;
+    font-size: 0.85rem;
+}
+
+.footer-container span {
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 
 .footer-container hr {
     width: 2px;
     background-color: var(--white-font);
-}
-
-.l-gap {
-    gap: 1rem;
-}
-
-.s-gap {
-    gap: 0.25rem;
 }
 
 .map-container {
@@ -41,7 +39,7 @@
 
 .f-anchor {
     cursor: pointer;
-    color: black;
+    color: var(--black-font);
 }
 
 .f-anchor:hover {

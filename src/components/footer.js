@@ -20,9 +20,9 @@ const Footer = () => {
                 <li className='flex-column l-gap'>
                     <span>Links</span>
                     <div className='flex-column s-gap'>    
-                        <a target='_blank' rel='noopener' className='f-anchor'>Fale conosco</a>
-                        <a target='_blank' rel='noopener' className='f-anchor'>FAQ</a>
-                        <a target='_blank' rel='noopener' href='https://www.belasartes.br/institucional/' className='f-anchor'>Quem nós somos?</a>
+                        <a target='_blank' rel='noreferrer' className='f-anchor'>Fale conosco</a>
+                        <a target='_blank' rel='noreferrer' className='f-anchor'>FAQ</a>
+                        <a target='_blank' rel='noreferrer' href='https://www.belasartes.br/institucional/' className='f-anchor'>Quem nós somos?</a>
                     </div>
                 </li>
 
@@ -31,10 +31,10 @@ const Footer = () => {
                 <li className='flex-column l-gap'>
                     <span>Acompanhe as novidades</span>
                     <div className='flex-row socials'>
-                        <a target='_blank' rel='noopener' href='https://www.facebook.com/belasartes' className='f-anchor'><ImFacebook  className='icons'/></a>
-                        <a target='_blank' rel='noopener' href='https://twitter.com/belasartes' className='f-anchor'><ImTwitter  className='icons'/></a>
-                        <a target='_blank' rel='noopener' href='https://www.instagram.com/belasartes/' className='f-anchor'><BsInstagram  className='icons'/></a>
-                        <a target='_blank' rel='noopener' href='https://www.linkedin.com/school/belasartessp/' className='f-anchor'><BsLinkedin  className='icons'/></a>
+                        <a target='_blank' rel='noreferrer' href='https://www.facebook.com/belasartes' className='f-anchor'><ImFacebook  className='icons'/></a>
+                        <a target='_blank' rel='noreferrer' href='https://twitter.com/belasartes' className='f-anchor'><ImTwitter  className='icons'/></a>
+                        <a target='_blank' rel='noreferrer' href='https://www.instagram.com/belasartes/' className='f-anchor'><BsInstagram  className='icons'/></a>
+                        <a target='_blank' rel='noreferrer' href='https://www.linkedin.com/school/belasartessp/' className='f-anchor'><BsLinkedin  className='icons'/></a>
                     </div>
                 </li>
 
@@ -43,8 +43,8 @@ const Footer = () => {
                 <li className='flex-column l-gap'>
                     <span>Serviço e Privacidade</span>
                     <div className='flex-column s-gap'>                    
-                        <a target='_blank' rel='noopener' className='f-anchor'>Termos de Serviços</a>
-                        <a target='_blank' rel='noopener' className='f-anchor'>Termos de privacidade</a>
+                        <a target='_blank' rel='noreferrer' className='f-anchor'>Termos de Serviços</a>
+                        <a target='_blank' rel='noreferrer' className='f-anchor'>Termos de Privacidade</a>
                     </div>
                 </li>
                 
@@ -59,10 +59,10 @@ const Footer = () => {
                             <button className='f-button' onClick={() => { turnAM(3) }}>Shop. Cidade Jardim</button>
                             <button className='f-button' onClick={() => { turnAM(4) }}>Sorocaba-Votorantim</button>
                         </div>
-                        <iframe src={Pa}  className={ activeMap === 1 ? 'footer-map' : 'display-none'} loading="lazy" ></iframe>
-                        <iframe src={VM}  className={ activeMap === 2 ? 'footer-map' : 'display-none'} loading="lazy" ></iframe>
-                        <iframe src={SCJ} className={ activeMap === 3 ? 'footer-map' : 'display-none'} loading="lazy" ></iframe>
-                        <iframe src={SV}  className={ activeMap === 4 ? 'footer-map' : 'display-none'} loading="lazy" ></iframe>
+                        <iframe title='Campus Paraíso' src={Pa}  className={ activeMap === 1 ? 'footer-map' : 'display-none'} loading="lazy" ></iframe>
+                        <iframe title='Campus Vila Mariana' src={VM}  className={ activeMap === 2 ? 'footer-map' : 'display-none'} loading="lazy" ></iframe>
+                        <iframe title='Campus Shopping Cidade Jardim' src={SCJ} className={ activeMap === 3 ? 'footer-map' : 'display-none'} loading="lazy" ></iframe>
+                        <iframe title='Campus Sorocaba-Votorantim' src={SV}  className={ activeMap === 4 ? 'footer-map' : 'display-none'} loading="lazy" ></iframe>
                     </div>
                 </li>
             </ul>

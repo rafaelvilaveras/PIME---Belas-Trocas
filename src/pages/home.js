@@ -1,8 +1,21 @@
 import React from 'react';
+import HomeSlider from '../components/home/home-slider';
+import ItemList from '../components/home/item-list';
+
+import '../css/App.css';
+import '../css/home.css';
 
 const Home = () => {
     return ( 
-        <h1>Home</h1>
+        <>
+            <div className='flex-column home-container'>
+                <HomeSlider/>
+                <div className='flex-row l-gap'>
+                    <ItemList/>
+                    <ItemList/>
+                </div>
+            </div>
+        </>
      );
 }
  

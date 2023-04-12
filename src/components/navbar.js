@@ -26,7 +26,7 @@ const Navbar = () => {
                 </li>
                 <li className='nav-content'>
                     <FaUser className='user-icon' />
-                    <p>FAÇA O <Link className='nav-links' to={"entrar"}>LOGIN</Link> OU <br/> <Link className='nav-links' to={"cadastro"} >CADASTRE-SE</Link></p>
+                    <p>FAÇA O <Link className='nav-links' to={"/entrar"}>LOGIN</Link> OU <br/> <Link className='nav-links' to={"/cadastro"}>CADASTRE-SE</Link></p>
                 </li>
             </ul>
         </>

@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Tomorrow:wght@100;200;300;400;500;600;700;800&display=swap');
+
+
+
+:root {
+  --blue-anchor: hsl(233, 94%, 38%);
+  --blue-bg: hsl(244, 53%, 59%);
+  --gray-bg: hsl(249, 37%, 86%);
+  --light-gray-bg: hsl(222, 48%, 95%);
+  --search-bg: hsl(222, 48%, 95%);
+  --red-border: hsl(0, 100%, 50%);
+  --purple-button: hsl(288, 97%, 50%);
+  --white-font: hsl(0, 0%, 96%);
+  --black-font: hsl(0, 0%, 0%);
+  --page-font-tomorrow: 'Tomorrow', sans-serif;
+  --page-font-poppins: 'Poppins', sans-serif;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -16,10 +34,14 @@ code {
   margin: 0;
   border: 0;
   padding: 0;
+  font-family: var(--page-font-poppins);
 }
 
-:root {
-  --blue-bg: hsl(244, 53%, 59%);
-  --search-bg: hsl(222, 48%, 95%);
-  --white-font: hsl(0, 0%, 96%);
+
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
