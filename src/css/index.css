@@ -7,6 +7,7 @@
   --blue-bg: hsl(244, 53%, 59%);
   --gray-bg: hsl(249, 37%, 86%);
   --light-gray-bg: hsl(222, 48%, 95%);
+  --pink-bg: hsl(280, 75%, 89%);
   --search-bg: hsl(222, 48%, 95%);
   --red-border: hsl(0, 100%, 50%);
   --purple-button: hsl(288, 97%, 50%);
@@ -39,9 +40,11 @@ code {
 
 
 /* Change the white to any color */
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active{
-    -webkit-box-shadow: 0 0 0 30px white inset !important;
+
+input:is(:-webkit-autofill, :-webkit-autofill:hover, :-webkit-autofill:focus, :-webkit-autofill:active) {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+select:is(:-webkit-autofill, :-webkit-autofill:hover, :-webkit-autofill:focus, :-webkit-autofill:active) {
+  -webkit-box-shadow: 0 0 0 30px white inset !important; 
 }

@@ -7,7 +7,7 @@ import Login from '../pages/login';
 import Home from '../pages/home';
 import Signin from '../pages/signin';
 import Footer from '../components/footer';
-import Notfound from '../pages/404';
+import Error from '../pages/error';
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
         />
         <Route
           path={'*'}
-          element={<Notfound/>}
+          element={<Error/>}
         />
       </Routes>
       <Footer/>

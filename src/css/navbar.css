@@ -1,6 +1,6 @@
 .nav-container {
     width: 100%;
-    height: 8vh;
+    height: 9vh;
     background-color: var(--blue-bg);
     justify-content: space-around;
     box-sizing: border-box;
@@ -66,11 +66,77 @@
     width: 2.5%;
     height: 5vh;
     position: absolute;
-    top: 1.35vh;
-    right: 10.5vw;
+    top: 1.75vh;
+    right: 10.25vw;
     cursor: pointer;
   }
   
   li {
     list-style-type: none;
+  }
+
+  .snav-container {
+    height: 6vh;
+    background-color: var(--pink-bg);
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+  }
+
+  .snav-container hr {
+    width: 3px;
+    height: 100%;
+    background-color: var(--white-font);
+  }
+
+  .sn-container {
+    position: relative;
+    width: 15vw;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sn-container a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sn-content {
+    position: absolute;
+    top: 2.5rem;
+    left: -2rem;
+    width: 135%;
+    background-color: var(--pink-bg);
+    padding: 0.75rem 0.35rem;
+    box-sizing: border-box;
+    gap: 0.75rem;
+    border-radius: 0 0 0.35rem 0.35rem;
+  }
+
+  .sn-content hr {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0.17rem;
+    background-color: var(--white-font);
+  }
+
+  .nlh {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nlh a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nlh:hover {
+    background-color: var(--blue-bg);
   }
