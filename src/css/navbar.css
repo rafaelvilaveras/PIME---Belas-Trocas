@@ -80,7 +80,6 @@
     background-color: var(--pink-bg);
     justify-content: center;
     align-items: center;
-    gap: 2rem;
 
   }
 
@@ -92,10 +91,11 @@
 
   .sn-container {
     position: relative;
-    width: 15vw;
+    width: 20%;
     height: 100%;
     align-items: center;
     text-align: center;
+    box-sizing: border-box;
   }
 
   .sn-container a {
@@ -108,9 +108,9 @@
 
   .sn-content {
     position: absolute;
-    top: 2.5rem;
-    left: -2rem;
-    width: 135%;
+    top: 6vh;
+    left: 0rem;
+    width: 100%;
     background-color: var(--pink-bg);
     padding: 0.75rem 0.35rem;
     box-sizing: border-box;

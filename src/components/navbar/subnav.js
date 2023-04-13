@@ -8,7 +8,7 @@ import '../../css/navbar.css';
 
 const Subnav = ({codintionP}) => {
 
-    const teste1 = [
+    const navItems = [
         {
             departamento:'Eletronicos',
             subdepartamento: [
@@ -17,9 +17,7 @@ const Subnav = ({codintionP}) => {
                 'Celulares'
             ]
 
-        }
-    ]
-    const teste2 = [
+        },
         {
             departamento: 'Livros Fisicos',
             subdepartamento:[
@@ -29,9 +27,7 @@ const Subnav = ({codintionP}) => {
                 'Auto Ajuda',
                 'Conhecimentos Gerais',
             ]
-        }
-    ]
-    const teste3 = [
+        },
         {
             departamento: 'materiais',
             subdepartamento:[
@@ -42,38 +38,37 @@ const Subnav = ({codintionP}) => {
         }
     ]
 
-    const [teste, setTeste] = useState(0)
+    const [window, toggleWindow] = useState(0)
 
     return ( 
         <>
-            <ul onMouseEnter={()=>{setTeste(0)}} className={codintionP ? 'display-none' : 'flex-row snav-container'}>
+            <ul onMouseEnter={()=>{toggleWindow(0)}} className={codintionP ? 'display-none' : 'flex-row snav-container'}>
                 <hr/>
-                <li onMouseOver={() => {setTeste(1)}} onMouseOut={()=>{setTeste(0)}} className='flex-column sn-container'>
-                    <Link className='nav-links' to={'/eletronicos'}>{teste1[0].departamento.toUpperCase()}</Link>
+                <li onMouseOver={() => {toggleWindow(1)}} onMouseOut={()=>{toggleWindow(0)}} className='flex-column sn-container'>
+                    <Link className='nav-links' to={'/eletronicos'}>{navItems[0].departamento.toUpperCase()}</Link>
                     <Snitems
-                        teste = {teste1}
-                        snActive={teste}
+                        navItems = {navItems[0]}
+                        snActive={window}
                         position = {1}
                     />
                 </li>
                 <hr/>
-                <li onMouseOver={() => {setTeste(2)}} onMouseOut={()=>{setTeste(0)}} className='sn-container' onMouseEnter={() => {}}>
-                    <Link className='nav-links' to={'/livros fisicos'}>{teste2[0].departamento.toUpperCase()}</Link>
+                <li onMouseOver={() => {toggleWindow(2)}} onMouseOut={()=>{toggleWindow(0)}} className='sn-container' onMouseEnter={() => {}}>
+                    <Link className='nav-links' to={'/livros fisicos'}>{navItems[1].departamento.toUpperCase()}</Link>
                     <Snitems
-                        teste = {teste2}
-                        snActive={teste}
+                        navItems = {navItems[1]}
+                        snActive={window}
                         position = {2}
                     />
                 </li>
                 <hr/>
-                <li onMouseOver={() => {setTeste(3)}} onMouseOut={()=>{setTeste(0)}} className='sn-container' onMouseEnter={() => {}}>
-                    <Link className='nav-links' to={'/materiais'}>{teste3[0].departamento.toUpperCase()}</Link>
+                <li onMouseOver={() => {toggleWindow(3)}} onMouseOut={()=>{toggleWindow(0)}} className='sn-container' onMouseEnter={() => {}}>
+                    <Link className='nav-links' to={'/materiais'}>{navItems[2].departamento.toUpperCase()}</Link>
                     <Snitems
-                        teste = {teste3}
-                        snActive={teste}
+                        navItems = {navItems[2]}
+                        snActive={window}
                         position = {3}
                     />
-                    
                 </li>
                 <hr/>
             </ul>
