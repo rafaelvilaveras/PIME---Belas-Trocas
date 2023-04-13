@@ -10,7 +10,7 @@ Este é um projeto desenvolvido para o PIME (Projeto Integrador Multidisciplinar
 - PHP
 
 
-Utilizando "npm start" o servidor de desenvolvimento irá iniciar e abrir o projeto em seu navegador padrão.
+Utilizando "npm install" para instalar as bibliotecas necessárias para o funcionamento do website e após isso "npm start" para o servidor de desenvolvimento irá iniciar e abrir o projeto em seu navegador padrão.
 
 ## Descrição do Projeto "Belas Trocas"
 
