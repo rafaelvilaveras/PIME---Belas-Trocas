@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import HomeSlider from '../components/home/home-slider';
 import ItemList from '../components/home/item-list';
 import { RiCheckboxCircleLine, RiCheckboxBlankCircleLine } from 'react-icons/ri';
+import { Link } from 'react-router-dom';
 
 import '../css/App.css';
 import '../css/home.css';
-import { Link } from 'react-router-dom';
 
 const Home = () => {
 
@@ -14,6 +14,7 @@ const Home = () => {
 
     const depart = ['Todos', 'Eletrônicos', 'Livros', 'Materiais']
 
+    console.log(filter)
 
     return ( 
         <>
@@ -39,7 +40,7 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='flex-row l-gap'>
+                    <div className='flex-row hi-e-container'>
                         <ItemList
                             filter = {filter}
                             type = {'Trocas'}
@@ -49,9 +50,9 @@ const Home = () => {
                             type = {'Doações'}
                         />
                     </div>
+                <Link className='txt-shadow i-link' to={'/departamentos'}>VER TODOS</Link>
                 </div>
 
-                <Link to={'/departamentos'}>VER TODOS</Link>
 
             </div>
         </>

@@ -1,6 +1,5 @@
 .home-container {
     width: 100%;
-    justify-content: center;
     align-items: center;
     /* gap: 1.5rem; */
 }
@@ -12,6 +11,9 @@
     /* max-width: 1440px; */ /* Faz o efeito igual ao da Kabum*/
     justify-content: center;
     align-items: center;
+    background-color: var(--light-gray-bg);
+    padding-bottom: 3rem;
+    gap: 1rem;
 }
 
 .f-container {
@@ -44,4 +46,17 @@
     gap: 0.2rem;
     cursor: pointer;
     border-radius: 0.25rem;
+}
+
+.i-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--purple-button);
+}
+
+.hi-e-container {
+    width: 100%;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
 }
