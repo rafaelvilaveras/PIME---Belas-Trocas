@@ -6,7 +6,7 @@ import {SlArrowRight, SlArrowLeft} from 'react-icons/sl';
 import '../../css/App.css';
 import '../../css/slider.css';
 
-import teste1 from '../../images/slider/teste1.jpg';
+import teste1 from '../../images/slider/CE1.png';
 import teste2 from '../../images/slider/teste2.jpg';
 import teste3 from '../../images/slider/teste3.jpg';
 import teste4 from '../../images/slider/teste4.jpg';
