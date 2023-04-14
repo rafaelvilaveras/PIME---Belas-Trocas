@@ -51,7 +51,6 @@ const ItemList = ({filter, type}) => {
                 <div className='flex-column hi-e-wrapper'>
                 <span className='hi-title txt-shadow'>{type+':'}</span>
                     {hItems.map((items, key)=>{
-                        console.log(arrayLength, key)
                         return(
                             <>
                                 <Link className='flex-row s-gap hi-link' key={'hi'+key} to={'/'+items.departament.toLocaleLowerCase()+'/'+items.subdepartament.toLocaleLowerCase()+'/'+items.id}>
