@@ -10,12 +10,13 @@ import Footer from '../components/footer';
 import Error from '../pages/error';
 
 function App() {
+
   return (
     <div className='app-container'>
       <Navbar/>
       <Routes>
         <Route
-          path={'/'}
+          index
           element={<Home/>}
         />
         <Route

@@ -19,7 +19,14 @@ const Signin = () => {
             <div className='flex-column s-page'>
                 <form id='sign_form' className='flex-column s-container' onSubmit={(e)=>{
                     e.preventDefault();
-                    alert(e.target.USERNAME.value);
+                    console.log(
+                            e.target.USERNAME.value,
+                            e.target.RM.value,
+                            e.target.EMAIL.value,
+                            e.target.PW.value,
+                            e.target.CAMPUS.value
+                        );
+                    alert('Esse botão está sem funcionalidade.')
                 }}>
                     <span className='s-title'>Cadastro Usuário</span>
                     <div className='input-boxes'>
@@ -28,7 +35,7 @@ const Signin = () => {
                             className='s-input'
                             type='text'
                             placeholder='Nome completo'
-                            // required
+                            required
                         />
                         <input
                             name='RM'
@@ -36,7 +43,7 @@ const Signin = () => {
                             type='text'
                             maxLength={8}
                             placeholder='Registro de matrícula'
-                            // required
+                            required
                         />
                     </div>
                     <div className='input-boxes'>
@@ -49,10 +56,10 @@ const Signin = () => {
                                 setValidE('')
                                 setEmail(e.target.value)
                             }}
-                            // required
+                            required
                         />
                         <input
-                            name='EMAIL'
+                            name='CEMAIL'
                             className={validE === ('') ? 's-input ': validE === true ? 's-input s-true' : 's-input s-false' }
                             type='email'
                             placeholder='Confirme o email'
@@ -60,7 +67,7 @@ const Signin = () => {
                             onChange={(e)=>{
                                 e.target.value === '' ? setValidE('') : e.target.value === email ? setValidE(true)  : setValidE(false)
                             }}
-                            // required
+                            required
                         />
                     </div>
                     <div className='input-boxes'>
@@ -74,7 +81,7 @@ const Signin = () => {
                                 setValidP('')
                                 setPw(e.target.value);
                             }}
-                            // required
+                            required
 
                         />
                         
@@ -101,7 +108,7 @@ const Signin = () => {
                             onChange={(e)=>{
                                 e.target.value === '' ? setValidP('') : e.target.value === pw ? setValidP(true)  : setValidP(false)
                             }}
-                            // required
+                            required
 
                         />
                         
@@ -124,7 +131,7 @@ const Signin = () => {
                         <select
                                 name='CAMPUS'
                                 className='s-input'
-                                // required
+                                required
                             >
                                 <option hidden>Campus</option>
                                 <option value={1}>Paraíso</option>

@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 import userReducer from './redux-features/user-reducer';
 import siteReducer from './redux-features/site-reducer';
 import { configureStore } from '@reduxjs/toolkit';
+import ScrollToTop from './js/scrollToTop';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -23,6 +24,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Provider store={store}>
+        <ScrollToTop/>
         <App />
       </Provider>
     </BrowserRouter>

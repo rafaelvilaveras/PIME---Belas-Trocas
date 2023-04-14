@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {GoPrimitiveDot} from 'react-icons/go';
 import {BsArrowLeftCircleFill, BsArrowRightCircleFill} from 'react-icons/bs';
 import {SlArrowRight, SlArrowLeft} from 'react-icons/sl';
@@ -16,8 +16,25 @@ const HomeSlider = () => {
 
     const teste = [teste1, teste2, teste3, teste4];
     const [index, setIndex] = useState(0);
+    const [trigger, setTrigger] = useState(0);
+    const [pause, setPause] = useState(false);
 
-    console.log(teste.length)
+    // Verificar Depois
+
+    // const autoSlider = () => {
+    //     if(!pause){
+    //         setTimeout(()=>{
+    //             index === teste.length-1 ? setIndex(0) : setIndex(index+1)
+    //             console.log()
+    //         }, 8 * 1000);
+
+    //     }
+    // }
+
+    // useEffect(()=>{
+    //     autoSlider()
+    // },[index]);
+
 
     return (
         <>
@@ -26,7 +43,7 @@ const HomeSlider = () => {
                     {/* <BsArrowLeftCircleFill /> */}
                     <SlArrowLeft/>
                 </div>
-                <div className='flex-row slider-wrapper'>
+                <div onMouseOver={()=>{setPause(true)}} onMouseOut={()=>{setPause(false)}} className='flex-row slider-wrapper'>
                     {teste.map((item, i)=>{
                         return(
                             <div key={'image'+i} className={i === index ? 'image-container' : 'display-none'}>

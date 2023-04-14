@@ -29,7 +29,7 @@ const Subnav = ({codintionP}) => {
             ]
         },
         {
-            departamento: 'materiais',
+            departamento: 'Materiais',
             subdepartamento:[
                 'Escolares e Acadêmicos',
                 'Bolsas',
@@ -42,10 +42,10 @@ const Subnav = ({codintionP}) => {
 
     return ( 
         <>
-            <ul onMouseEnter={()=>{toggleWindow(0)}} className={codintionP ? 'display-none' : 'flex-row snav-container'}>
+            <ul className={codintionP ? 'display-none' : 'flex-row snav-container'}>
                 <hr/>
                 <li onMouseOver={() => {toggleWindow(1)}} onMouseOut={()=>{toggleWindow(0)}} className='flex-column sn-container'>
-                    <Link className='nav-links' to={'/eletronicos'}>{navItems[0].departamento.toUpperCase()}</Link>
+                    <Link className='nav-links txt-shadow' to={'/eletronicos'}>{navItems[0].departamento.toUpperCase()}</Link>
                     <Snitems
                         navItems = {navItems[0]}
                         snActive={window}
@@ -54,7 +54,7 @@ const Subnav = ({codintionP}) => {
                 </li>
                 <hr/>
                 <li onMouseOver={() => {toggleWindow(2)}} onMouseOut={()=>{toggleWindow(0)}} className='sn-container' onMouseEnter={() => {}}>
-                    <Link className='nav-links' to={'/livros fisicos'}>{navItems[1].departamento.toUpperCase()}</Link>
+                    <Link className='nav-links txt-shadow' to={'/livros fisicos'}>{navItems[1].departamento.toUpperCase()}</Link>
                     <Snitems
                         navItems = {navItems[1]}
                         snActive={window}
@@ -63,7 +63,7 @@ const Subnav = ({codintionP}) => {
                 </li>
                 <hr/>
                 <li onMouseOver={() => {toggleWindow(3)}} onMouseOut={()=>{toggleWindow(0)}} className='sn-container' onMouseEnter={() => {}}>
-                    <Link className='nav-links' to={'/materiais'}>{navItems[2].departamento.toUpperCase()}</Link>
+                    <Link className='nav-links txt-shadow' to={'/materiais'}>{navItems[2].departamento.toUpperCase()}</Link>
                     <Snitems
                         navItems = {navItems[2]}
                         snActive={window}
