@@ -6,8 +6,6 @@ import '../../css/navbar.css';
 
 const Snitems = ({navItems, snActive, position}) => {
 
-    console.log(navItems.subdepartamento)
-
     return ( 
         <>
             <ul className={snActive === position ? 'flex-column sn-content' : 'display-none'}>

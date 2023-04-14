@@ -116,6 +116,7 @@
     box-sizing: border-box;
     gap: 0.75rem;
     border-radius: 0 0 0.35rem 0.35rem;
+    z-index: 9999;
   }
 
   .sn-content hr {

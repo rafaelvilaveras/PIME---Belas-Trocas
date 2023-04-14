@@ -4,6 +4,7 @@
 
 :root {
   --blue-anchor: hsl(233, 94%, 38%);
+  --black-bg: hsl(0, 0%, 0%, 75%);
   --blue-bg: hsl(244, 53%, 59%);
   --gray-bg: hsl(249, 37%, 86%);
   --light-gray-bg: hsl(222, 48%, 95%);
