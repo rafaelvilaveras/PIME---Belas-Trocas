@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {GoPrimitiveDot} from 'react-icons/go';
 import {BsArrowLeftCircleFill, BsArrowRightCircleFill} from 'react-icons/bs';
+import {SlArrowRight, SlArrowLeft} from 'react-icons/sl';
 
 import '../../css/App.css';
 import '../../css/slider.css';
@@ -21,8 +22,9 @@ const HomeSlider = () => {
     return (
         <>
             <div className='flex-row slider-container prevent-select'>
-                <div className='arrow-container left'>
-                    <BsArrowLeftCircleFill onClick={()=>{index === 0 ? setIndex(teste.length-1) : setIndex(index-1)}}/>
+                <div onClick={()=>{index === 0 ? setIndex(teste.length-1) : setIndex(index-1)}} className='arrow-container left'>
+                    {/* <BsArrowLeftCircleFill /> */}
+                    <SlArrowLeft/>
                 </div>
                 <div className='flex-row slider-wrapper'>
                     {teste.map((item, i)=>{
@@ -39,8 +41,9 @@ const HomeSlider = () => {
                 </div>
                 </div>
 
-                <div className='arrow-container right'>
-                    <BsArrowRightCircleFill onClick={()=>{index === teste.length-1 ? setIndex(0) : setIndex(index+1)}}/>
+                <div onClick={()=>{index === teste.length-1 ? setIndex(0) : setIndex(index+1)}} className='arrow-container right'>
+                    {/* <BsArrowRightCircleFill/> */}
+                    <SlArrowRight/>
                 </div>
             </div>
         </>
