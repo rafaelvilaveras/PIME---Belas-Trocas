@@ -59,10 +59,10 @@ const Footer = () => {
                             <button className='f-button' onClick={() => { turnAM(3) }}>Shop. Cidade Jardim</button>
                             <button className='f-button' onClick={() => { turnAM(4) }}>Sorocaba-Votorantim</button>
                         </div>
-                        <iframe title='Campus Paraíso' src={Pa}  className={ activeMap === 1 ? 'footer-map' : 'display-none'} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <iframe title='Campus Vila Mariana' src={VM}  className={ activeMap === 2 ? 'footer-map' : 'display-none'} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <iframe title='Campus Shopping Cidade Jardim' src={SCJ} className={ activeMap === 3 ? 'footer-map' : 'display-none'} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <iframe title='Campus Sorocaba-Votorantim' src={SV}  className={ activeMap === 4 ? 'footer-map' : 'display-none'} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe title='Campus Paraíso' src={Pa}  className={ activeMap === 1 ? 'footer-map' : 'display-none'} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe title='Campus Vila Mariana' src={VM}  className={ activeMap === 2 ? 'footer-map' : 'display-none'} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe title='Campus Shopping Cidade Jardim' src={SCJ} className={ activeMap === 3 ? 'footer-map' : 'display-none'} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe title='Campus Sorocaba-Votorantim' src={SV}  className={ activeMap === 4 ? 'footer-map' : 'display-none'} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </li>
             </ul>

@@ -46,3 +46,31 @@
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
+
+.input-boxes {
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.a-input {
+  width: 40%;
+  border: 1px solid transparent;
+  padding: 0.35rem 0.5rem;
+  box-sizing: border-box;
+  outline: none;
+  border-radius: 0.25rem;
+}
+
+.a-input:disabled {
+  background-color: white;
+}
+
+.a-false {
+  border: 1px solid var(--red-border);
+}
+
+.a-true {
+  border: 1px solid var(--green-border);
+}

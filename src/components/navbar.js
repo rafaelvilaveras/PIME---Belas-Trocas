@@ -11,7 +11,8 @@ import '../css/navbar.css';
 const Navbar = () => {
 
     const location = useLocation();
-    const codintionP = (location.pathname === '/entrar') || (location.pathname === '/cadastro') 
+    const codintionP = (location.pathname === '/entrar') || (location.pathname === '/cadastro')
+    const logged = true
 
     return ( 
         <>
@@ -30,9 +31,13 @@ const Navbar = () => {
                         <FaSearch className='search-icon' />
                     </form>
                 </li>
-                <li className='nav-content'>
+                <li className={logged ? 'display-none' : 'nav-content'}>
                     <FaUser className='user-icon' />
                     <p>FAÇA O <Link className='nav-links' to={"/entrar"}>LOGIN</Link> OU <br/> <Link className='nav-links' to={"/cadastro"}>CADASTRE-SE</Link></p>
+                </li>
+                <li className={!logged ? 'display-none' : 'nav-content'}>
+                    <FaUser className='user-icon' />
+                    <Link  className='nav-links' to={"/perfil"}>Usuário</Link>
                 </li>
             </ul>
             <Subnav

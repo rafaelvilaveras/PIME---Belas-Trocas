@@ -4,130 +4,64 @@ import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai'
 import '../css/App.css';
 import '../css/signin.css';
 import Button from '../components/button';
+import CompareInput from '../components/compare-input';
+import { useNavigate } from 'react-router-dom';
 
 const Signin = () => {
 
-    const [pw, setPw] = useState('');
-    const [email, setEmail] = useState('');
-    const [validP, setValidP] = useState('');
-    const [validE, setValidE] = useState('');
-    const [seePw, setVis] = useState(false);
-    const [seePwC, setVisC] = useState(false);
+    const navigate = useNavigate()
+
+    function handleSubmit(e) {
+        console.log(
+                e.target.USERNAME.value,
+                e.target.RM.value,
+                e.target.EMAIL.value,
+                e.target.PASSWORD.value,
+                e.target.CAMPUS.value
+            );
+
+            // alert('Cadastro efetuado sem validações!');
+
+            // navigate('/entrar');
+
+    }
 
     return ( 
         <>
             <div className='flex-column s-page'>
                 <form id='sign_form' className='flex-column s-container' onSubmit={(e)=>{
                     e.preventDefault();
-                    console.log(
-                            e.target.USERNAME.value,
-                            e.target.RM.value,
-                            e.target.EMAIL.value,
-                            e.target.PW.value,
-                            e.target.CAMPUS.value
-                        );
-                    alert('Esse botão está sem funcionalidade.')
+                    handleSubmit(e);
                 }}>
                     <span className='s-title'>Cadastro Usuário</span>
-                    <div className='input-boxes'>
+                    <div className='input-boxes prevent-select'>
                         <input
                             name='USERNAME'
-                            className='s-input'
+                            className='a-input'
                             type='text'
-                            placeholder='Nome completo'
+                            placeholder='NOME COMPLETO'
                             required
                         />
                         <input
                             name='RM'
-                            className='s-input'
+                            className='a-input'
                             type='text'
                             maxLength={8}
-                            placeholder='Registro de matrícula'
+                            placeholder='REGISTRO DE MATRÍCULA'
                             required
                         />
                     </div>
-                    <div className='input-boxes'>
-                        <input
-                            name='EMAIL'
-                            className='s-input'
-                            type='email'
-                            placeholder='Email'
-                            onChange={(e) => {
-                                setValidE('')
-                                setEmail(e.target.value)
-                            }}
-                            required
-                        />
-                        <input
-                            name='CEMAIL'
-                            className={validE === ('') ? 's-input ': validE === true ? 's-input s-true' : 's-input s-false' }
-                            type='email'
-                            placeholder='Confirme o email'
-                            autoComplete='off'
-                            onChange={(e)=>{
-                                e.target.value === '' ? setValidE('') : e.target.value === email ? setValidE(true)  : setValidE(false)
-                            }}
-                            required
+                    <div className='input-boxes prevent-select'>
+                        <CompareInput
+                            type={'email'}
                         />
                     </div>
-                    <div className='input-boxes'>
-                        <input
-                            name='PW'
-                            className='s-input'
-                            type={seePw ? 'text' : 'password'}
-                            placeholder='Senha'
-                            autoComplete='off'
-                            onChange={(e)=>{
-                                setValidP('')
-                                setPw(e.target.value);
-                            }}
-                            required
-
-                        />
-                        
-                        <AiFillEye
-                            className={seePw ? 'pw-icon' : 'display-none'}
-                            onClick={(e)=>{
-                                e.preventDefault()
-                                setVis(false)
-                            }}
-                        />
-                        <AiFillEyeInvisible
-                            className={seePw ? 'display-none' : 'pw-icon'}
-                            onClick={(e)=>{
-                                e.preventDefault()
-                                setVis(true)
-                            }}
-                        />
-                        <input
-                            name='CPW'
-                            className={validP === ('') ? 's-input ': validP === true ? 's-input s-true' : 's-input s-false' }
-                            type={ seePwC ? 'text' : 'password'}
-                            placeholder='Confirme a senha'
-                            autoComplete='off'
-                            onChange={(e)=>{
-                                e.target.value === '' ? setValidP('') : e.target.value === pw ? setValidP(true)  : setValidP(false)
-                            }}
-                            required
-
-                        />
-                        
-                        <AiFillEye
-                            className={seePwC ? 'pwC-icon' : 'display-none'}
-                            onClick={(e)=>{
-                                e.preventDefault()
-                                setVisC(false)
-                            }}
-                        />
-                        <AiFillEyeInvisible
-                            className={seePwC ? 'display-none' : 'pwC-icon'}
-                            onClick={(e)=>{
-                                e.preventDefault()
-                                setVisC(true)
-                            }}
+                    <div className='input-boxes prevent-select'>
+                        <CompareInput
+                            type={'password'}
                         />
                     </div>
-                    <div className='input-boxes'>                        
+                    <div className='input-boxes prevent-select'>                        
                         <select
                                 name='CAMPUS'
                                 className='s-input'
@@ -140,9 +74,9 @@ const Signin = () => {
                                 <option value={4}>Sorocaba-Votorantim</option>
                             </select>
                     </div>
-                    <div className='flex-column sb-container'>                        
+                    <div className='flex-column sb-container prevent-select'>                        
                         <span>Ao clicar em cadastrar você está concordando com os <a className='s-terms'>termos de uso</a>.</span>
-                        <Button disabled={!(validP && validE)} content={'Cadastrar'}/>
+                        <Button content={'Cadastrar'} type={'submit'} value={''}/>
                     </div>
 
                 </form>

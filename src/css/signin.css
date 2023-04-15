@@ -25,30 +25,6 @@
     font-weight: 500;
 }
 
-.input-boxes {
-    width: 75%;
-    display: flex;
-    justify-content: space-around;
-    position: relative;
-}
-
-.s-input {
-    width: 40%;
-    border: 1px solid transparent;
-    padding: 0.35rem 0.5rem;
-    box-sizing: border-box;
-    outline: none;
-    border-radius: 0.25rem;
-}
-
-.s-false {
-    border: 1px solid var(--red-border);
-}
-
-.s-true {
-    border: 1px solid green;
-}
-
 .s-terms {
     color: var(--blue-anchor);
     text-decoration: underline;
@@ -57,18 +33,4 @@
 
 .sb-container {
     align-items: center;
-}
-
-.pw-icon {
-    position: absolute;
-    left: 28vw;
-    top: 1.25vh;
-    cursor: pointer;
-}
-
-.pwC-icon {
-    position: absolute;
-    right: 4vw;
-    top: 1.25vh;
-    cursor: pointer;
 }
