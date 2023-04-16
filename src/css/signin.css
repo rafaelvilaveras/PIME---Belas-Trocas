@@ -9,11 +9,18 @@
     width: 90%;
     height: 70%;
     align-items: center;
-    justify-content: space-around;
+    gap: 2.5rem;
+}
+
+.s-content {
+    width: 70%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.5rem;
 }
 
 .s-title {
-    width: 75%;
+    width: 100%;
     display: flex;
     justify-content: center;
     background-color: var(--blue-bg);
@@ -25,6 +32,13 @@
     font-weight: 500;
 }
 
+.s-inner-content {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
 .s-terms {
     color: var(--blue-anchor);
     text-decoration: underline;
@@ -32,5 +46,10 @@
 }
 
 .sb-container {
+    margin-top: 0.75rem;
     align-items: center;
+}
+
+.s-select {
+    color: gray;
 }

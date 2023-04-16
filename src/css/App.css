@@ -48,9 +48,9 @@
 }
 
 .input-boxes {
-    width: 75%;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     position: relative;
 }
 

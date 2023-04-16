@@ -67,7 +67,7 @@ const Profile = () => {
                             />
                         </div>
                         <div>
-                            <button className={ changePw ? 'display-none' : 'cb p-button'} type='button' onClick={()=>{toggleChangePw(true)}}>Trocar enha</button>
+                            <button className={ changePw ? 'display-none' : 'cb p-button'} type='button' onClick={()=>{toggleChangePw(true)}}>Trocar Senha</button>
                         </div>
                     </div>
                     <form ref={pFormRef} className={changePw ? 'flex-column p-form' : 'display-none'} onSubmit={(e)=>{

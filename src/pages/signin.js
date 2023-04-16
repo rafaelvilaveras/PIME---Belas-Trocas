@@ -29,57 +29,60 @@ const Signin = () => {
     return ( 
         <>
             <div className='flex-column s-page'>
-                <form id='sign_form' className='flex-column s-container' onSubmit={(e)=>{
-                    e.preventDefault();
-                    handleSubmit(e);
-                }}>
-                    <span className='s-title'>Cadastro Usuário</span>
-                    <div className='input-boxes prevent-select'>
-                        <input
-                            name='USERNAME'
-                            className='a-input'
-                            type='text'
-                            placeholder='NOME COMPLETO'
-                            required
-                        />
-                        <input
-                            name='RM'
-                            className='a-input'
-                            type='text'
-                            maxLength={8}
-                            placeholder='REGISTRO DE MATRÍCULA'
-                            required
-                        />
-                    </div>
-                    <div className='input-boxes prevent-select'>
-                        <CompareInput
-                            type={'email'}
-                        />
-                    </div>
-                    <div className='input-boxes prevent-select'>
-                        <CompareInput
-                            type={'password'}
-                        />
-                    </div>
-                    <div className='input-boxes prevent-select'>                        
-                        <select
-                                name='CAMPUS'
-                                className='s-input'
-                                required
-                            >
-                                <option hidden>Campus</option>
-                                <option value={1}>Paraíso</option>
-                                <option value={2}>Vila Mariana</option>
-                                <option value={3}>Shop. Cidade Jardim</option>
-                                <option value={4}>Sorocaba-Votorantim</option>
-                            </select>
-                    </div>
-                    <div className='flex-column sb-container prevent-select'>                        
-                        <span>Ao clicar em cadastrar você está concordando com os <a className='s-terms'>termos de uso</a>.</span>
-                        <Button content={'Cadastrar'} type={'submit'} value={''}/>
-                    </div>
+                <div className='flex-column s-container'>
+                    <div className='flex-column s-content'>
+                        <span className='s-title'>Cadastro Usuário</span>
+                        <form id='sign_form' className='flex-column  s-inner-content' onSubmit={(e)=>{
+                            e.preventDefault();
+                            handleSubmit(e);
+                        }}>
+                            <div className='input-boxes prevent-select'>
+                                <input
+                                    name='USERNAME'
+                                    className='a-input'
+                                    type='text'
+                                    placeholder='NOME COMPLETO'
+                                    required
+                                />
+                                <input
+                                    name='RM'
+                                    className='a-input'
+                                    type='text'
+                                    maxLength={8}
+                                    placeholder='REGISTRO DE MATRÍCULA'
+                                    required
+                                />
+                            </div>
+                            <div className='input-boxes prevent-select'>
+                                <CompareInput
+                                    type={'email'}
+                                />
+                            </div>
+                            <div className='input-boxes prevent-select'>
+                                <CompareInput
+                                    type={'password'}
+                                />
+                            </div>
+                            <div className='flex-row input-boxes prevent-select'>                        
+                                <select
+                                        name='CAMPUS'
+                                        className='a-input s-select'
+                                        required
+                                    >
+                                        <option value={1}>Paraíso</option>
+                                        <option value={2}>Vila Mariana</option>
+                                        <option value={3}>Shop. Cidade Jardim</option>
+                                        <option value={4}>Sorocaba-Votorantim</option>
+                                    </select>
+                            </div>
+                            <div className='flex-column sb-container prevent-select'>                        
+                                <span>Ao clicar em cadastrar você está concordando com os <a className='s-terms'>termos de uso</a>.</span>
+                                <Button content={'Cadastrar'} type={'submit'} value={''}/>
+                            </div>
 
-                </form>
+                        </form>
+                    </div>
+                </div>
             </div>
         </>
      );
