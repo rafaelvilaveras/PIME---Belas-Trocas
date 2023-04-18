@@ -1,4 +1,5 @@
 .footer-container {
+    width: 100%;
     background-color: var(--blue-bg);
     padding: 1rem;
     box-sizing: border-box;

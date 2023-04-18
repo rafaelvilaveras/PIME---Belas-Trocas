@@ -15,46 +15,48 @@ import Departament from '../pages/departament-page';
 function App() {
 
   return (
-    <div className='app-container'>
+    <div className='flex-column app-container'>
       <Navbar/>
-      <Routes>
-        <Route
-          index
-          element={<Home/>}
-        />
-        <Route
-          path={'/u/entrar'}
-          element={<Login/>}
-        />
-        <Route
-          path={'/u/cadastro'}
-          element={<Signin/>}
-        />
-        <Route
-          path={'/u/:usuario'}
-          element={<Profile/>}
-        />
-        <Route
-          path={'/u/:usuario/meus itens'}
-          element={<Error/>}
-        />
-        <Route
-          path={'/d/:departamento'}
-          element={<Departament/>}
-        />
-        <Route
-          path={'/d/:departamento/:subdepartamento'}
-          element={<Error/>}
-        />
-        <Route
-          path={'/d/:departamento/:subdepartamento/:itemID'}
-          element={<Error/>}
-        />
-        <Route
-          path={'*'}
-          element={<Error/>}
-        />
-      </Routes>
+      <div className='inner-app-container'>
+          <Routes>
+            <Route
+              index
+              element={<Home/>}
+            />
+            <Route
+              path={'/u/entrar'}
+              element={<Login/>}
+            />
+            <Route
+              path={'/u/cadastro'}
+              element={<Signin/>}
+            />
+            <Route
+              path={'/u/:usuario'}
+              element={<Profile/>}
+            />
+            <Route
+              path={'/u/:usuario/meus itens'}
+              element={<Error/>}
+            />
+            <Route
+              path={'/d/:departamento'}
+              element={<Departament/>}
+            />
+            <Route
+              path={'/d/:departamento/:subdepartamento'}
+              element={<Error/>}
+            />
+            <Route
+              path={'/d/:departamento/:subdepartamento/:itemID'}
+              element={<Error/>}
+            />
+            <Route
+              path={'*'}
+              element={<Error/>}
+            />
+          </Routes>
+      </div>
       <Footer/>
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {GoPrimitiveDot} from 'react-icons/go';
 import {BsArrowLeftCircleFill, BsArrowRightCircleFill} from 'react-icons/bs';
 import {SlArrowRight, SlArrowLeft} from 'react-icons/sl';

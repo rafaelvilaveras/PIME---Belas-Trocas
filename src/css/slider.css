@@ -3,7 +3,6 @@
 
 .slider-container {
     width: 100%;
-    /* max-width: 1440px; */ /* Faz o efeito igual o da Kabum */
     height: 65vh;
     /* margin: 1rem auto; */
     justify-content: space-around;
