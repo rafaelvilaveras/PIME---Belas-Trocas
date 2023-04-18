@@ -14,8 +14,11 @@
   --green-border: hsl(120, 100%, 25%);
   --red-border: hsl(0, 100%, 50%);
   --purple-button: hsl(288, 97%, 50%);
-  --white-font: hsl(0, 0%, 96%);
   --black-font: hsl(0, 0%, 0%);
+  --blue-font: hsl(244, 53%, 59%);
+  --dark-blue-font: hsl(233, 94%, 38%);
+  --purple-font: hsl(288, 97%, 50%);
+  --white-font: hsl(0, 0%, 96%);
   --page-font-tomorrow: 'Tomorrow', sans-serif;
   --page-font-poppins: 'Poppins', sans-serif;
 }

@@ -1,35 +1,42 @@
 
 .hi-container {
-    width: fit-content;
-    justify-content: center;
-    align-items: center;
+    width: 50%;
     gap: 2rem;
     padding: 1rem;
     box-sizing: border-box;
 }
 
 .hi-e-wrapper {
+    width: 100%;
     gap: 1.75rem;
+    align-items: center;
 }
 
 .hi-title {
+    width: 30rem;
     font-size: 1.5rem;
     font-weight: bold;
 }
 
 .hi-link {
-    width: fit-content;
+    width: 100%;
     text-decoration: none;
     color: var(--black-font);
+    align-items: center;
+    justify-content: center;
     gap: 1rem;
 }
 
 .hi-name {
+    width: 100%;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
     font-weight: bold;
 }
 
 .hi-image-container {
     width: 5rem;
+    height: 5rem;
     border: 2px solid var(--blue-border);
     border-radius: 0.75rem;
     overflow: hidden;
@@ -52,7 +59,7 @@
 }
 
 .hi-hr {
-    width: 100%;
+    width: 75%;
     height: 3px;
     background-color: white;
 }

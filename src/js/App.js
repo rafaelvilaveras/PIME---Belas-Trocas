@@ -10,6 +10,7 @@ import Signin from '../pages/signin';
 import Footer from '../components/footer';
 import Error from '../pages/error';
 import Profile from '../pages/profile';
+import Departament from '../pages/departament-page';
 
 function App() {
 
@@ -22,16 +23,32 @@ function App() {
           element={<Home/>}
         />
         <Route
-          path={'/entrar'}
+          path={'/u/entrar'}
           element={<Login/>}
         />
         <Route
-          path={'/cadastro'}
+          path={'/u/cadastro'}
           element={<Signin/>}
         />
         <Route
-          path={'/perfil'}
+          path={'/u/:usuario'}
           element={<Profile/>}
+        />
+        <Route
+          path={'/u/:usuario/meus itens'}
+          element={<Error/>}
+        />
+        <Route
+          path={'/d/:departamento'}
+          element={<Departament/>}
+        />
+        <Route
+          path={'/d/:departamento/:subdepartamento'}
+          element={<Error/>}
+        />
+        <Route
+          path={'/d/:departamento/:subdepartamento/:itemID'}
+          element={<Error/>}
         />
         <Route
           path={'*'}

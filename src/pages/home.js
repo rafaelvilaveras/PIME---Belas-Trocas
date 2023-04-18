@@ -9,12 +9,11 @@ import '../css/home.css';
 
 const Home = () => {
 
-    const [filter, setFilter] = useState(0)
+    const [filter, setFilter] = useState('Todos')
     const teste = true;
 
     const depart = ['Todos', 'Eletrônicos', 'Livros', 'Materiais']
 
-    console.log(filter)
 
     return ( 
         <>
@@ -30,9 +29,9 @@ const Home = () => {
                             <div className='flex-row f-checkbox-container'>
                                 {depart.map((item, key)=>{
                                    return(
-                                        <div className='flex-row f-checkbox' key={'checkbox'+key} onClick={()=>{setFilter(key)}}>
-                                            <RiCheckboxBlankCircleLine className={filter !== key ? '' : 'display-none'}/>
-                                            <RiCheckboxCircleLine className={filter === key ? '' : 'display-none'}/>
+                                        <div className='flex-row f-checkbox' key={'checkbox'+key} onClick={()=>{setFilter(item)}}>
+                                            <RiCheckboxBlankCircleLine className={filter !== item ? '' : 'display-none'}/>
+                                            <RiCheckboxCircleLine className={filter === item ? '' : 'display-none'}/>
                                             <span>{item}</span>
                                         </div>
                                     );
@@ -50,7 +49,7 @@ const Home = () => {
                             type = {'Doações'}
                         />
                     </div>
-                <Link className='txt-shadow i-link' to={'/departamentos'}>VER TODOS</Link>
+                <Link className='txt-shadow i-link' to={'/d/recentes'}>VER TODOS</Link>
                 </div>
 
 

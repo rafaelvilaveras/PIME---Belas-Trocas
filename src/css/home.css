@@ -57,6 +57,7 @@
 .hi-e-container {
     width: 100%;
     padding: 1rem;
+    box-sizing: border-box;
     justify-content: center;
     align-items: center;
 }

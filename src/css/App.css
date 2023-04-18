@@ -26,6 +26,8 @@
   justify-content: space-between;
 }
 
+/* BOTÃO BASE / BASE BUTTON */
+
 .cb {
   padding: 0.35rem 2.25rem;
   margin-top: 1rem;
@@ -36,6 +38,8 @@
   font-weight: bold;
   cursor: pointer;
 }
+
+/* BOTÃO BASE / BASE BUTTON */
 
 .txt-shadow {
   text-shadow: 2px 2px 5px hsl(0, 0%, 0%, 25%);
@@ -73,4 +77,20 @@
 
 .a-true {
   border: 1px solid var(--green-border);
+}
+
+.bg-pink {
+    background-color: var(--pink-bg);
+}
+
+.bg-blue {
+    background-color: var(--blue-bg);
+}
+
+.blue-font {
+  color: var(--blue-font);
+}
+
+.purple-font {
+  color: var(--purple-font);
 }

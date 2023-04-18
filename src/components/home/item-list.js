@@ -53,7 +53,7 @@ const ItemList = ({filter, type}) => {
                     {hItems.map((items, key)=>{
                         return(
                             <>
-                                <Link className='flex-row s-gap hi-link' key={'hi'+key} to={'/'+items.departament.toLocaleLowerCase()+'/'+items.subdepartament.toLocaleLowerCase()+'/'+items.id}>
+                                <Link className='flex-row hi-link' key={'hi'+key} to={'/d/'+items.departament.toLowerCase()+'/'+items.subdepartament.toLowerCase()+'/'+items.id}>
                                     <div className='hi-image-container'>
                                         <img src={items.image}/>
                                     </div>
