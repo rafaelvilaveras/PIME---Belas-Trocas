@@ -76,6 +76,10 @@
     list-style-type: none;
   }
 
+  .username {
+    cursor: default;
+  }
+
   /* Profile Nav */
   
   .pn-container {

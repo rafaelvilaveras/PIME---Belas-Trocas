@@ -5,6 +5,7 @@ import '../../css/hitemlist.css';
 
 import placeholder from '../../images/placeholder-image.jpg';
 import { Link } from 'react-router-dom';
+import padronizeUrl from '../functions/padronizeUrl';
 
 const ItemList = ({filter, type}) => {
  
@@ -53,7 +54,7 @@ const ItemList = ({filter, type}) => {
                     {hItems.map((items, key)=>{
                         return(
                             <>
-                                <Link className='flex-row hi-link' key={'hi'+key} to={'/d/'+items.departament.toLowerCase()+'/'+items.subdepartament.toLowerCase()+'/'+items.id}>
+                                <Link className='flex-row hi-link' key={'hi'+key} to={padronizeUrl('/i/'+items.id)}>
                                     <div className='hi-image-container'>
                                         <img src={items.image}/>
                                     </div>

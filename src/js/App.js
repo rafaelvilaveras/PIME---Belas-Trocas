@@ -10,7 +10,8 @@ import Signin from '../pages/signin';
 import Footer from '../components/footer';
 import Error from '../pages/error';
 import Profile from '../pages/profile';
-import Departament from '../pages/departament-page';
+import Departament from '../pages/departament.js';
+import Subdepartament from '../pages/subdepartament';
 
 function App() {
 
@@ -45,10 +46,10 @@ function App() {
             />
             <Route
               path={'/d/:departamento/:subdepartamento'}
-              element={<Error/>}
+              element={<Subdepartament/>}
             />
             <Route
-              path={'/d/:departamento/:subdepartamento/:itemID'}
+              path={'/i/:itemID'}
               element={<Error/>}
             />
             <Route

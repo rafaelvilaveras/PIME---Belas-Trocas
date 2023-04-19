@@ -5,12 +5,13 @@ import Snitems from './snitems';
 
 import '../../css/App.css';
 import '../../css/navbar.css';
+import padronizeUrl from '../functions/padronizeUrl';
 
 const Subnav = ({codintionP}) => {
 
     const navItems = [
         {
-            departamento:'Eletronicos',
+            departamento:'Eletrônicos',
             subdepartamento: [
                 'Pendrives',
                 'Fones de ouvido',
@@ -19,9 +20,9 @@ const Subnav = ({codintionP}) => {
 
         },
         {
-            departamento: 'Livros Fisicos',
+            departamento: 'Livros Físicos',
             subdepartamento:[
-                'Academicos',
+                'Acadêmicos',
                 'Escolares',
                 'Literários',
                 'Auto Ajuda',
@@ -49,7 +50,7 @@ const Subnav = ({codintionP}) => {
                 </li>
                 <hr/>
                 <li onMouseOver={() => {toggleWindow(1)}} onMouseOut={()=>{toggleWindow(0)}} className='flex-column sn-container'>
-                    <Link className='nav-links txt-shadow' to={'/d/'+navItems[0].departamento.toLowerCase()}>{navItems[0].departamento.toUpperCase()}</Link>
+                    <Link className='nav-links txt-shadow' to={padronizeUrl('/d/'+navItems[0].departamento)}>{navItems[0].departamento.toUpperCase()}</Link>
                     <Snitems
                         navItems = {navItems[0]}
                         snActive={window}
@@ -58,7 +59,7 @@ const Subnav = ({codintionP}) => {
                 </li>
                 <hr/>
                 <li onMouseOver={() => {toggleWindow(2)}} onMouseOut={()=>{toggleWindow(0)}} className='sn-container'>
-                    <Link className='nav-links txt-shadow' to={'/d/'+navItems[1].departamento.toLowerCase()}>{navItems[1].departamento.toUpperCase()}</Link>
+                    <Link className='nav-links txt-shadow' to={padronizeUrl('/d/'+navItems[1].departamento)}>{navItems[1].departamento.toUpperCase()}</Link>
                     <Snitems
                         navItems = {navItems[1]}
                         snActive={window}
@@ -67,7 +68,7 @@ const Subnav = ({codintionP}) => {
                 </li>
                 <hr/>
                 <li onMouseOver={() => {toggleWindow(3)}} onMouseOut={()=>{toggleWindow(0)}} className='sn-container'>
-                    <Link className='nav-links txt-shadow' to={'/d/'+navItems[2].departamento.toLowerCase()}>{navItems[2].departamento.toUpperCase()}</Link>
+                    <Link className='nav-links txt-shadow' to={padronizeUrl('/d/'+navItems[2].departamento)}>{navItems[2].departamento.toUpperCase()}</Link>
                     <Snitems
                         navItems = {navItems[2]}
                         snActive={window}

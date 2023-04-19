@@ -39,7 +39,7 @@ const Navbar = () => {
                 </li>
                 <li  onMouseOver={() => {toggleUM(true)}} onMouseOut={()=>{toggleUM(false)}} className={!logged ? 'display-none' : 'nav-content'}>
                     <FaUser className='user-icon nav-links' />
-                    <span  className='nav-links' to={"/u/perfil"}>VilaVeras</span>
+                    <span  className='nav-links username'>VilaVeras</span>
                     <UserNav
                         userMenu={userMenu}
                     />
