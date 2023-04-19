@@ -6,6 +6,7 @@ Este é um projeto desenvolvido para o PIME (Projeto Integrador Multidisciplinar
 - React-Redux
 - React-Router-Dom
 - React-Icons
+- Axios
 - SQL
 - PHP
 
