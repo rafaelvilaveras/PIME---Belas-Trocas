@@ -1,14 +1,11 @@
 # PIME 2023.1
 
-Link: https://pime-belas-trocas.vercel.app/
-
 Este é um projeto desenvolvido para o PIME (Projeto Integrador Multidisciplinar e Extensionista), utilizando as seguintes tecnologias:
 
 - ReactJs
 - React-Redux
 - React-Router-Dom
 - React-Icons
-- Axios
 - SQL
 - PHP
 

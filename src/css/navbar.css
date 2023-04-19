@@ -1,7 +1,17 @@
+.nav-geral {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue-bg);
+}
+
 .nav-container {
     width: 100%;
+    max-width: 1560px;
     height: 9vh;
-    background-color: var(--blue-bg);
+    max-height: 7rem;
     justify-content: space-around;
     box-sizing: border-box;
   }
@@ -22,13 +32,29 @@
   }
   
   .nav-search {
-    width: 60%;
+    width: 50%;
+  }
+
+  .nav-form {
+    width: 75%;
     position: relative;
   }
   
+  .search-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.35rem;
+    position: absolute;
+    top: 0.35rem;
+    right: 0.65rem;
+    cursor: pointer;
+  }
+  
   .nav-search input {
-    width: 40vw;
+    width: 100%;
     height: 5vh;
+    max-height: 2rem;
     border: 1.75px solid var(--white-font);
     border-radius: 25px;
     padding-left: 15px;
@@ -41,7 +67,6 @@
     justify-content: center;
     align-items: center;
     gap: 0.75rem;
-    position: relative;
   }
   
   .nav-content p {
@@ -55,21 +80,20 @@
     text-decoration: none;
     font-weight: bold;
   }
+
+  .user-container {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .username-container {
+    gap: 0.5rem;
+  }
   
   .user-icon {
     height: 100%;
-  }
-  
-  .search-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 2.5%;
-    height: 5vh;
-    position: absolute;
-    top: 1.85vh;
-    right: 10.25vw;
-    cursor: pointer;
   }
   
   li {
@@ -77,16 +101,22 @@
   }
 
   .username {
+    margin: 0;
     cursor: default;
+  }
+
+  .user-menu-container {
+    width: 100%;
+    position: relative;
   }
 
   /* Profile Nav */
   
   .pn-container {
-    width: 150%;
     position: absolute;
-    top: 8.96vh;
-    right: -3.5vw;
+    width: 150%;
+    top: 1rem;
+    right: -1.5rem;
     background-color: var(--blue-bg);
     color: var(--white-font);
     padding: 0.75rem 0.75rem;
@@ -107,10 +137,22 @@
 
   /* Subnav */
 
+  .sn-geral {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: var(--pink-bg);
+    justify-content: center;
+    align-items: center;
+
+  }
+
   .snav-container {
     width: 100%;
+    max-width: 1440px;
+    width: 100%;
     height: 6vh;
-    background-color: var(--pink-bg);
+    max-height: 4rem;
     justify-content: center;
     align-items: center;
 
@@ -126,9 +168,6 @@
     position: relative;
     width: 20%;
     height: 100%;
-    align-items: center;
-    text-align: center;
-    box-sizing: border-box;
   }
 
   .sn-container a {
@@ -141,8 +180,6 @@
 
   .sn-content {
     position: absolute;
-    top: 6vh;
-    left: 0rem;
     width: 100%;
     background-color: var(--pink-bg);
     padding: 0.75rem 0.35rem;

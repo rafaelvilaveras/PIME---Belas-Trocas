@@ -1,12 +1,12 @@
 import React from 'react';
 
 import '../css/App.css';
-import '../css/departament-page.css';
+import '../css/departament.css';
 
-import placeholder from '../images/placeholder-image.jpg';
 import { Link } from 'react-router-dom';
 import Itemcard from '../components/item-card';
 import padronizeUrl from '../components/functions/padronizeUrl';
+import { depItems3 as depItems } from '../components/placeholder/placeholder';
 // import { Link, useLocation } from 'react-router-dom'; USAR DEPOIS QUE TIVER FEITO API
 
 
@@ -16,119 +16,6 @@ const Departament = () => {
 
     // console.log(location.pathname.split('/')[1]) USAR DEPOIS QUE TIVER FEITO A API
 
-    const depItems = [
-        {
-            departament: 'Livros Físicos',
-            subdepartament: 'Livros Acadêmicos',
-            item:[
-                {
-                    user: 'Fulano',
-                    data:{
-                        id: '9718923',
-                        img: placeholder,
-                        name: 'Arquitetura - Guia  Visual de Estilos',
-                        type: 'Troca',
-                        campus: 'Paraíso'
-                    },
-                },
-                {
-
-                    user: 'Cicrano',
-                    data:{
-                        id: '5682321',
-                        img: placeholder,
-                        name: 'Moda, Arte e História',
-                        type: 'Troca',
-                        campus: 'Paraíso'
-                    },
-                },
-                {
-                    
-                    user: 'Beltrano',
-                    data:{
-                        id: '3282521',
-                        img: placeholder,
-                        name: 'Legal Design - Teoria e Prática',
-                        type: 'Troca',
-                        campus: 'Paraíso'
-                    },
-                }
-            ]
-        },
-        {
-            departament: 'Livros Físicos',
-            subdepartament: 'Teste',
-            item:[
-                {
-                    user: 'Fulano',
-                    data:{
-                        id: '7237127',
-                        img: placeholder,
-                        name: 'teste1',
-                        type: 'Troca',
-                        campus: 'Paraíso'
-                    },
-                },
-                {
-
-                    user: 'Cicrano',
-                    data:{
-                        id: '5121383',
-                        img: placeholder,
-                        name: 'teste2',
-                        type: 'Troca',
-                        campus: 'Paraíso'
-                    },
-                },
-                {
-                    
-                    user: 'Beltrano',
-                    data:{
-                        id: '1242151',
-                        img: placeholder,
-                        name: 'teste3',
-                        type: 'Troca',
-                        campus: 'Paraíso'
-                    },
-                }
-            ]
-        },
-        // {
-        //     departament: 'Livros Físicos',
-        //     subdepartament: 'Teste',
-        //     item:[
-        //         {
-        //             user: 'Fulano',
-        //             data:{
-        //                 img: placeholder,
-        //                 name: 'teste1',
-        //                 type: 'Troca',
-        //                 campus: 'Paraíso'
-        //             },
-        //         },
-        //         {
-
-        //             user: 'Cicrano',
-        //             data:{
-        //                 img: placeholder,
-        //                 name: 'teste2',
-        //                 type: 'Troca',
-        //                 campus: 'Paraíso'
-        //             },
-        //         },
-        //         {
-                    
-        //             user: 'Beltrano',
-        //             data:{
-        //                 img: placeholder,
-        //                 name: 'teste3',
-        //                 type: 'Troca',
-        //                 campus: 'Paraíso'
-        //             },
-        //         }
-        //     ]
-        // },
-    ];
 
     return ( 
         <>
@@ -142,7 +29,8 @@ const Departament = () => {
                                     return(
                                         <Itemcard
                                             key={'item-card'+index}
-                                            className={!depindex%2 ? 'flex-column dep-items-container bg-pink' : 'flex-column dep-items-container bg-blue'}
+                                            className={!depindex%2 ? 'bg-pink dep-cards' : 'bg-blue dep-cards'}
+                                            classImg={'dep-img-container'}
                                             index={index}
                                             item={item}
                                             url={'/i/'+item.data.id}

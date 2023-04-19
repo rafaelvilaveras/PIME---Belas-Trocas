@@ -3,11 +3,14 @@
 
 
 :root {
+  --teste: hsl(222, 48%, 95%);
   --blue-anchor: hsl(233, 94%, 38%);
   --black-bg: hsl(0, 0%, 0%, 75%);
   --blue-bg: hsl(244, 53%, 59%);
+  --light-blue-bg: hsl(244, 53%, 59%, 0.7);
   --gray-bg: hsl(249, 37%, 86%);
   --light-gray-bg: hsl(222, 48%, 95%);
+  --light-yellow-bg: hsl(51, 94%, 75%, 0.3);
   --pink-bg: hsl(280, 75%, 89%);
   --search-bg: hsl(222, 48%, 95%);
   --blue-border: hsl(240, 100%, 25%);
@@ -24,7 +27,7 @@
 }
 
 html {
-  background-color: #EBEFF8;
+  background-color: hsl(221, 61%, 93%);
 }
 
 body {

@@ -1,0 +1,49 @@
+.sd-container {
+    width: 100%;
+    max-width: 1560px;
+    padding: 2rem 0.5rem;
+    box-sizing: border-box;
+    background-color: var(--light-gray-bg);
+}
+
+.sd-content {
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    gap: 3.5rem;
+    margin-top: 2rem;
+}
+
+.sd-info {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    color: var(--black-font);
+    font-weight: bold;
+}
+
+.sd-info-name {
+    color: var(--purple-font);
+}
+
+.sd-content-wrapper {
+    width: 90%;
+    flex-wrap: wrap;
+    position: relative;
+    gap: 1rem;
+}
+
+.sd-cards {
+    flex: 0 1 18%;
+    min-width: 10rem;
+    margin-bottom: 4rem;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+.sd-img-container {
+    width: 75%;
+    height: 15vh;
+    max-height: 15.625rem;
+}

@@ -22,6 +22,7 @@
 
 .app-container {
   width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -30,7 +31,10 @@
 
 .inner-app-container {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1560px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* BOTÃO BASE / BASE BUTTON */
@@ -91,7 +95,11 @@
 }
 
 .bg-blue {
-    background-color: var(--blue-bg);
+    background-color: var(--light-blue-bg);
+}
+
+.bg-light-yellow {
+  background-color: var(--light-yellow-bg);
 }
 
 .blue-font {

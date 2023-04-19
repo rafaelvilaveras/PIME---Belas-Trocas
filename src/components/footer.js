@@ -15,7 +15,7 @@ const Footer = () => {
     const SV    = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3657.9677811033966!2d-47.467387!3d-23.5336612!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c58a6f3a0ffb01%3A0xb9140afb3a06edfd!2sFaculdade%20Belas%20Artes%20-%20Campus%20Sorocaba-Votorantim!5e0!3m2!1spt-BR!2sbr!4v1681240109031!5m2!1spt-BR!2sbr";
 
     return ( 
-        <>
+        <div className='footer-out-container'>
             <ul className='flex-row footer-container'>
                 <li className='flex-column l-gap'>
                     <span>Links</span>
@@ -66,7 +66,7 @@ const Footer = () => {
                     </div>
                 </li>
             </ul>
-        </>
+        </div>
      );
 }
  

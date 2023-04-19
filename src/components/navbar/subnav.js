@@ -42,14 +42,14 @@ const Subnav = ({codintionP}) => {
     const [window, toggleWindow] = useState(0)
 
     return ( 
-        <>
+        <div className='sn-geral'>
             <ul className={codintionP ? 'display-none' : 'flex-row snav-container'}>
                 <hr/>
                 <li className='flex-column sn-container'>
                     <Link className='nav-links txt-shadow' to={'/d/geral'}>TODOS DEPARTAMENTOS</Link>
                 </li>
                 <hr/>
-                <li onMouseOver={() => {toggleWindow(1)}} onMouseOut={()=>{toggleWindow(0)}} className='flex-column sn-container'>
+                <li onMouseOver={() => {toggleWindow(1)}} onMouseOut={()=>{toggleWindow(0)}} className='sn-container'>
                     <Link className='nav-links txt-shadow' to={padronizeUrl('/d/'+navItems[0].departamento)}>{navItems[0].departamento.toUpperCase()}</Link>
                     <Snitems
                         navItems = {navItems[0]}
@@ -77,7 +77,7 @@ const Subnav = ({codintionP}) => {
                 </li>
                 <hr/>
             </ul>
-        </>
+        </div>
      );
 }
  

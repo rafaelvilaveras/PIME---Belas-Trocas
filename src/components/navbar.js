@@ -17,7 +17,7 @@ const Navbar = () => {
     const [userMenu, toggleUM] = useState(false);
 
     return ( 
-        <>
+        <div className='nav-geral'>
             <ul className='flex-row nav-container' >
                 <li className='nav-logo'>
                     <Link to={"/"}>
@@ -37,18 +37,22 @@ const Navbar = () => {
                     <FaUser className='user-icon' />
                     <p>FAÇA O <Link className='nav-links' to={"/u/entrar"}>LOGIN</Link> OU <br/> <Link className='nav-links' to={"/u/cadastro"}>CADASTRE-SE</Link></p>
                 </li>
-                <li  onMouseOver={() => {toggleUM(true)}} onMouseOut={()=>{toggleUM(false)}} className={!logged ? 'display-none' : 'nav-content'}>
-                    <FaUser className='user-icon nav-links' />
-                    <span  className='nav-links username'>VilaVeras</span>
-                    <UserNav
-                        userMenu={userMenu}
-                    />
+                <li  onMouseOver={() => {toggleUM(true)}} onMouseOut={()=>{toggleUM(false)}} className={!logged ? 'display-none' : 'flex-column user-container'}>
+                    <div className='flex-row username-container'>
+                        <FaUser className='user-icon nav-links' />
+                        <span  className='nav-links username'>VilaVeras</span>
+                    </div>
+                    <div className='user-menu-container'>
+                        <UserNav
+                            userMenu={userMenu}
+                        />
+                    </div>
                 </li>
             </ul>
             <Subnav
             codintionP={codintionP}
             />
-        </>
+        </div>
      );
 }
  
