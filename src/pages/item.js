@@ -8,8 +8,6 @@ import { item } from '../components/placeholder/placeholder';
 const ItemPage = ({itemID}) => {
 
     const [imgIndex, setImgIndex] = useState(0)
-
-    console.log(item[0].item.data)
     
     useEffect(()=>{
 
@@ -23,8 +21,8 @@ const ItemPage = ({itemID}) => {
                         <div className='flex-column ip-img-selector-container'>
                             {item[0].item.data.img.map((ISImg, ISIndex)=>{
                                 return(
-                                    <div onClick={()=>{setImgIndex(ISIndex)}} className={(ISIndex === imgIndex) ? 'flex-column ip-img-selector active-img' : 'flex-column ip-img-selector'}>
-                                        <img src={ISImg}/>
+                                    <div onClick={()=>{setImgIndex(ISIndex)}} className={(ISIndex === imgIndex) ? 'flex-column ip-img-selector active-img' : 'flex-column ip-img-selector'} key={'ip-img-selector'+ISIndex}>
+                                        <img src={ISImg} key={'IS-img'+ISIndex}/>
                                     </div>
                                 );
                             })}
