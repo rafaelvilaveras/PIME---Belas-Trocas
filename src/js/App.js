@@ -12,6 +12,7 @@ import Error from '../pages/error';
 import Profile from '../pages/profile';
 import Departament from '../pages/departament.js';
 import Subdepartament from '../pages/subdepartament';
+import ItemPage from '../pages/item';
 
 function App() {
 
@@ -54,7 +55,9 @@ function App() {
             />
             <Route
               path={'/i/:itemID'}
-              element={<Error/>}
+              element={<ItemPage
+                itemID = {location.pathname.split('/')[2]}
+              />}
             />
             <Route
               path={'*'}

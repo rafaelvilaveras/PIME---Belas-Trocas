@@ -1,4 +1,5 @@
 import placeholder from '../../images/placeholder-image.jpg';
+import img1 from '../../images/slider/CE1.png'
 
 export const depItems3 = [
     {
@@ -343,5 +344,29 @@ export const depItems20 = [
                 },
             },
         ]
+    },
+];
+
+export const item = [
+    {
+        departament: 'Livros Físicos',
+        subdepartament: 'Livros Acadêmicos',
+        item:{
+            name: 'Arquitetura - Guia  Visual de Estilos',
+            description: 'Isso é um placeholder de descrição, não tente copiar isto em casa, sujeito a punição!',
+            user: 'Fulano',
+            data:{
+                id: '9718923',
+                img: [
+                    img1,
+                    placeholder,
+                    img1,
+                    placeholder,
+                ],
+                type: 'Troca',
+                campus: 'Paraíso'
+            },
+        },
+        
     },
 ];

@@ -22,6 +22,7 @@ const Subdepartament = (url) => {
 
     // console.log(url)
 
+
     return ( 
         <>
             <div className='flex-column sd-container'>
@@ -38,15 +39,14 @@ const Subdepartament = (url) => {
                                 count = 0;
                             }
                             return(
-                                <>
-                                    <Itemcard
+                                <Itemcard
+                                        key={'sd-itemcard-'+index}
                                         className={!(count < 5) ? 'sd-cards bg-light-yellow' : 'sd-cards bg-blue'}
                                         classImg={'sd-img-container'}
                                         index={index}
                                         item={item}
-                                        url={padronizeUrl('/i/'+depItems)}
+                                        url={padronizeUrl('/i/'+item.data.id)}
                                     />
-                                </>
                             );
                         })}
                     </div>
