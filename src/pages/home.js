@@ -49,7 +49,7 @@ const Home = () => {
                             type = {'Doações'}
                         />
                     </div>
-                <Link className='txt-shadow i-link' to={'/d/recentes'}>VER TODOS</Link>
+                <Link className='txt-shadow i-link' to={'/d/geral/recentes'}>VER TODOS</Link>
                 </div>
 
 

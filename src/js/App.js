@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 
 import '../css/App.css';
 
@@ -14,6 +14,8 @@ import Departament from '../pages/departament.js';
 import Subdepartament from '../pages/subdepartament';
 
 function App() {
+
+  const location = useLocation();
 
   return (
     <div className='flex-column app-container'>
@@ -46,7 +48,9 @@ function App() {
             />
             <Route
               path={'/d/:departamento/:subdepartamento'}
-              element={<Subdepartament/>}
+              element={<Subdepartament
+                url = {location.pathname}
+              />}
             />
             <Route
               path={'/i/:itemID'}

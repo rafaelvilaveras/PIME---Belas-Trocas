@@ -29,7 +29,7 @@ const Departament = () => {
                                     return(
                                         <Itemcard
                                             key={'item-card'+index}
-                                            className={!depindex%2 ? 'bg-pink dep-cards' : 'bg-blue dep-cards'}
+                                            className={depindex%2 ? 'bg-blue dep-cards' : 'bg-pink dep-cards'}
                                             classImg={'dep-img-container'}
                                             index={index}
                                             item={item}

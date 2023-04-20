@@ -2,17 +2,15 @@ import React, { useEffect, useState } from 'react';
 
 import '../css/App.css';
 import '../css/subdepartament.css';
-import { useLocation } from 'react-router-dom';
 import { depItems20 as depItems } from '../components/placeholder/placeholder';
 import Itemcard from '../components/item-card';
 import padronizeUrl from '../components/functions/padronizeUrl';
 
-const Subdepartament = () => {
+const Subdepartament = (url) => {
 
 
 
     const [page, setPage] = useState(1);
-    const location = useLocation('');
     var count = -1;
 
     // var nome = "ÁÁÁÁÁÁÁÁ";
@@ -22,6 +20,7 @@ const Subdepartament = () => {
 
     },[page]);
 
+    // console.log(url)
 
     return ( 
         <>
@@ -38,7 +37,6 @@ const Subdepartament = () => {
                             }else{
                                 count = 0;
                             }
-                            console.log('index ', index, 'count ', count);
                             return(
                                 <>
                                     <Itemcard
@@ -53,7 +51,7 @@ const Subdepartament = () => {
                         })}
                     </div>
                     <div>
-
+                        
                     </div>
                 </div>
             </div>

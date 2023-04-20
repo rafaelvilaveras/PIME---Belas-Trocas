@@ -4,6 +4,7 @@ export const depItems3 = [
     {
         departament: 'Livros Físicos',
         subdepartament: 'Livros Acadêmicos',
+        pages: 15, 
         item:[
             {
                 user: 'Fulano',
