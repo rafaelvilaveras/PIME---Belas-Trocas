@@ -9,18 +9,16 @@ import { Link } from 'react-router-dom';
 import padronizeUrl from '../functions/padronizeUrl';
 
 
-const UserNav = ({userMenu}) => {
-
-    const user = 'VilaVeras';
+const UserNav = ({userMenu, userInfo}) => {
 
     return ( 
         <>
             <div className={ userMenu ? 'flex-column pn-container' : 'display-none'}>
-                <Link to={padronizeUrl('/u/'+user)} className='flex-row nav-links pn-content'>
+                <Link to={padronizeUrl('/u/'+userInfo.username.toLowerCase())} className='flex-row nav-links pn-content'>
                     <FaUser/>
                     <span>Perfil</span>
                 </Link>
-                <Link to={padronizeUrl('/u/'+user+'/meus itens')} className='flex-row nav-links pn-content'>
+                <Link to={padronizeUrl('/u/'+userInfo.username.toLowerCase()+'/meus itens')} className='flex-row nav-links pn-content'>
                     <BsBoxSeam/>
                     <span>Meus Itens</span>
                 </Link>

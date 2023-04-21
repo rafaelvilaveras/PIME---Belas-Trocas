@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import LBT from '../images/LBT.png';
 import { FaUser, FaSearch } from 'react-icons/fa'
+import { BiCloudUpload } from 'react-icons/bi';
+import { IoIosNotifications } from 'react-icons/io';
 import Subnav from './navbar/subnav';
 
 
@@ -9,7 +11,7 @@ import '../css/App.css';
 import '../css/navbar.css';
 import UserNav from './navbar/user-nav';
 
-const Navbar = () => {
+const Navbar = ({userInfo}) => {
 
     const location = useLocation();
     const codintionP = (location.pathname === '/entrar') || (location.pathname === '/cadastro')
@@ -37,15 +39,27 @@ const Navbar = () => {
                     <FaUser className='user-icon' />
                     <p>FAÇA O <Link className='nav-links' to={"/u/entrar"}>LOGIN</Link> OU <br/> <Link className='nav-links' to={"/u/cadastro"}>CADASTRE-SE</Link></p>
                 </li>
-                <li  onMouseOver={() => {toggleUM(true)}} onMouseOut={()=>{toggleUM(false)}} className={!logged ? 'display-none' : 'flex-column user-container'}>
-                    <div className='flex-row username-container'>
-                        <FaUser className='user-icon nav-links' />
-                        <span  className='nav-links username'>VilaVeras</span>
+                <li className={!logged ? 'display-none' : 'flex-row user-wrapper'}>
+                    <div className={'flex-row user-options-container'}>
+                        <Link to={'/u/'+userInfo.username.toLowerCase()+'/criar publicacao'} className='flex-row user-options-content'>
+                            <BiCloudUpload className='user-icon nav-links'/>
+                        </Link>
+                        <Link to={'/u/'+userInfo.username.toLowerCase()+'/notificacoes'} className='flex-row user-options-content'>
+                            <IoIosNotifications className='user-icon nav-links'/>
+                        </Link>
+                        <hr/>
                     </div>
-                    <div className='user-menu-container'>
-                        <UserNav
-                            userMenu={userMenu}
-                        />
+                    <div  onMouseOver={() => {toggleUM(true)}} onMouseOut={()=>{toggleUM(false)}} className={'flex-column user-container'}>
+                        <div className='flex-row username-container'>
+                            <FaUser className='nav-links username-icon' />
+                            <span  className='nav-links username'>{userInfo.username.split(' ')[0]}</span>
+                        </div>
+                        <div className='user-menu-container'>
+                            <UserNav
+                                userMenu={userMenu}
+                                userInfo={userInfo}
+                            />
+                        </div>
                     </div>
                 </li>
             </ul>

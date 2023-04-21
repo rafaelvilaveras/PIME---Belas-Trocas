@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 
 import '../css/App.css';
@@ -13,14 +13,28 @@ import Profile from '../pages/profile';
 import Departament from '../pages/departament.js';
 import Subdepartament from '../pages/subdepartament';
 import ItemPage from '../pages/item';
+import { useDispatch, useSelector } from 'react-redux';
+import { getUserInfo } from '../redux-features/user-reducer';
+import Notifications from '../pages/notifications';
 
 function App() {
 
   const location = useLocation();
 
+  const dispatch = useDispatch();
+
+  useEffect(()=>{
+    dispatch(getUserInfo({username:'Fulano', rm:'xxxxxx', email:'teste@teste.com', authToken:'a78sd@asasf#as9d6a89s6faw124!u'}))
+  },[]);
+
+  const userInfo = useSelector((state)=>state.userR.userInfo);
+
+
   return (
     <div className='flex-column app-container'>
-      <Navbar/>
+      <Navbar
+        userInfo = {userInfo}
+      />
       <div className='inner-app-container'>
           <Routes>
             <Route
@@ -36,11 +50,15 @@ function App() {
               element={<Signin/>}
             />
             <Route
-              path={'/u/:usuario'}
+              path={'/u/:usuario/'}
               element={<Profile/>}
             />
             <Route
-              path={'/u/:usuario/meus itens'}
+              path={'/u/:usuario/notificacoes'}
+              element={<Notifications/>}
+            />
+            <Route
+              path={'/u/:usuario/:meusitens'}
               element={<Error/>}
             />
             <Route

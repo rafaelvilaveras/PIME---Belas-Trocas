@@ -17,9 +17,6 @@
     gap: 1rem;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap;
-    overflow-x: hidden;
-    text-overflow: ellipsis;
   }
   
   .ic-user {

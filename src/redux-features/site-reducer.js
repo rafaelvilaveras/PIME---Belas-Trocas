@@ -9,7 +9,7 @@ export const siteSlicer = createSlice({
     reducers: {
         clearUrl: (state, action) => {
             const aux = action.payload.url.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
-            console.log(aux)
+            console.log(state.appBg)
             return 'teste';
 
         },
