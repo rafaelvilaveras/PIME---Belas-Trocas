@@ -53,7 +53,7 @@ const ItemList = ({filter, type}) => {
                 <span className='hi-title txt-shadow'>{type+':'}</span>
                     {hItems.map((items, key)=>{
                         return(
-                            <div key={'hi-key'+key}>
+                            <div className='flex-column hi-fixer' key={'hi-key'+key}>
                                 <Link className='flex-row hi-link' key={'hi'+key} to={padronizeUrl('/i/'+items.id)}>
                                     <div className='hi-image-container'>
                                         <img src={items.image}/>

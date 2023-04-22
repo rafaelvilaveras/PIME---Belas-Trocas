@@ -63,3 +63,8 @@
     height: 3px;
     background-color: white;
 }
+
+.hi-fixer {
+    align-items: center;
+    gap: 1.5rem;
+}

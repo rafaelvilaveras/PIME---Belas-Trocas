@@ -371,3 +371,27 @@ export const item = [
     },
 ];
 
+export const notifications = [
+    {
+       items: [
+        {
+            img: placeholder,
+            type: 'Troca',
+            username: 'Fulano',
+            name: 'Caneta Bic',
+        },
+        {
+            img: placeholder,
+            type: 'Doação',
+            username: 'Cicrano',
+            name: 'Pendrive',
+        },
+        {
+            img: placeholder,
+            type: 'Troca',
+            username: 'Beltrano',
+            name: 'Notebook',
+        },
+       ] 
+    }
+];
