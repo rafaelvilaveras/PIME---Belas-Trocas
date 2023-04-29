@@ -395,3 +395,48 @@ export const notifications = [
        ] 
     }
 ];
+
+export const my_items =
+[
+    {
+       user: 'VilaVeras',
+       items: [
+            {
+                code: 4124123,
+                status: 'Aberto',
+                data: '20/04/2023',
+                info:{
+                        img: placeholder,
+                        title: 'Memórias Póstumas de Brás Cubas',
+                        quant: 1,
+                        departament: 'Livros Literários',
+                        type: 'Doação'
+                    }
+            },
+            {
+                code: 4124123,
+                status: 'Aberto',
+                data: '20/04/2023',
+                info:{
+                        img: placeholder,
+                        title: 'Memórias Póstumas de Brás Cubas',
+                        quant: 1,
+                        departament: 'Livros Literários',
+                        type: 'Doação'
+                    }
+            },
+            {
+                code: 4124123,
+                status: 'Aberto',
+                data: '20/04/2023',
+                info:{
+                        img: placeholder,
+                        title: 'Memórias Póstumas de Brás Cubas',
+                        quant: 1,
+                        departament: 'Livros Literários',
+                        type: 'Doação'
+                    }
+            },
+        ]
+    }
+]

@@ -12,6 +12,7 @@ import '../css/navbar.css';
 
 import UserNav from './navbar/user-nav';
 import NotificationBar from './navbar/notification-bar';
+import padronizeUrl from './functions/padronizeUrl';
 
 const Navbar = ({userInfo}) => {
 
@@ -46,7 +47,7 @@ const Navbar = ({userInfo}) => {
                     <div>
                         <div className={'flex-row user-options-container'}>
                             <div>
-                                <Link to={'/u/'+userInfo.username.toLowerCase()+'/criar publicacao'} className='flex-row user-options-content'>
+                                <Link to={padronizeUrl('/u/'+userInfo.username.toLowerCase()+'/criar anúncio')} className='flex-row user-options-content'>
                                     <BiCloudUpload className='user-icon nav-links'/>
                                 </Link>
                             </div>

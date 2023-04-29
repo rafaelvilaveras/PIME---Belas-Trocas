@@ -16,6 +16,8 @@ import ItemPage from '../pages/item';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserInfo } from '../redux-features/user-reducer';
 import Notifications from '../pages/notifications';
+import MyItems from '../pages/my-items';
+import UploadItems from '../pages/upload-item';
 
 function App() {
 
@@ -58,8 +60,12 @@ function App() {
               element={<Notifications/>}
             />
             <Route
-              path={'/u/:usuario/:meusitens'}
-              element={<Error/>}
+              path={'/u/:usuario/meus itens'}
+              element={<MyItems/>}
+            />
+            <Route
+              path={'/u/:usuario/criar anuncio'}
+              element={<UploadItems/>}
             />
             <Route
               path={'/d/:departamento'}

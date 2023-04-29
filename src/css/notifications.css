@@ -1,0 +1,63 @@
+.notifications-container {
+    width: 100%;
+    min-height: 83vh;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.notifications-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.notifications-content {
+    width: 100%;
+}
+
+.notifications-page-quant {
+    align-self: flex-end;
+}
+
+.notifications-wrapper {
+    width: 90%;
+    align-self: center;
+}
+
+.notifications-inner-content {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.n-i-fixer {
+    width: 50%;
+    gap: 1rem;
+}
+
+.notification-image-container {
+    width: 100%;
+    max-width: 5rem;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.notification-image-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.notification-type, .notification-item, .notification-user {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.notification-item {
+    color: var(--white-font);
+}
+
+.notification-user {
+    font-size: 1rem;
+    color: var(--dark-blue-font);
+}
