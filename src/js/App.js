@@ -18,6 +18,8 @@ import { getUserInfo } from '../redux-features/user-reducer';
 import Notifications from '../pages/notifications';
 import MyItems from '../pages/my-items';
 import UploadItems from '../pages/upload-item';
+import Trade from '../components/trade';
+import Donate from '../components/donate';
 
 function App() {
 
@@ -30,12 +32,19 @@ function App() {
   },[]);
 
   const userInfo = useSelector((state)=>state.userR.userInfo);
+  const siteConfig = useSelector((state)=>state.siteR);
 
 
   return (
     <div className='flex-column app-container'>
       <Navbar
         userInfo = {userInfo}
+      />
+      <Trade
+        siteConfig = {siteConfig}
+      />
+      <Donate
+        siteConfig = {siteConfig}
       />
       <div className='inner-app-container'>
           <Routes>

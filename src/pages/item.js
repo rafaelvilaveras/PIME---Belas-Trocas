@@ -4,6 +4,8 @@ import '../css/App.css';
 import '../css/item-page.css';
 
 import { item } from '../components/placeholder/placeholder';
+import { useDispatch } from 'react-redux';
+import { toggleTD } from '../redux-features/site-reducer';
 
 const ItemPage = ({itemID}) => {
 
@@ -12,6 +14,8 @@ const ItemPage = ({itemID}) => {
     useEffect(()=>{
 
     },[])
+
+    const dispatch = useDispatch();
 
     return ( 
         <>
@@ -39,7 +43,7 @@ const ItemPage = ({itemID}) => {
                         <span className='ip-type'>{item[0].item.data.type}</span>
                         <div className='flex-row ip-adjust'>
                             <span className='ip-campus'>{'Campus Belas Artes '+item[0].item.data.campus}</span>
-                            <button className='ip-button'>Eu Quero!</button>
+                            <button className='ip-button' onClick={()=>{dispatch(toggleTD({type: item[0].item.data.type}))}}>Eu Quero!</button>
                         </div>
                     </div>
                 </div>

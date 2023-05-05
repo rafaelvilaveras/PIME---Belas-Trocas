@@ -419,7 +419,7 @@ export const my_items =
                 data: '20/04/2023',
                 info:{
                         img: placeholder,
-                        title: 'Memórias Póstumas de Brás Cubas',
+                        title: 'Um teste de máquina',
                         quant: 1,
                         departament: 'Livros Literários',
                         type: 'Doação'
@@ -431,7 +431,7 @@ export const my_items =
                 data: '20/04/2023',
                 info:{
                         img: placeholder,
-                        title: 'Memórias Póstumas de Brás Cubas',
+                        title: 'O Hobbit',
                         quant: 1,
                         departament: 'Livros Literários',
                         type: 'Doação'

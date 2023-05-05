@@ -102,6 +102,14 @@
   background-color: var(--light-yellow-bg);
 }
 
+.bg-dark-gray {
+  background-color: var(--dark-gray-bg);
+}
+
+.bg-purple {
+  background-color: var(--purple-font);
+}
+
 .blue-font {
   color: var(--blue-font);
 }

@@ -5,6 +5,8 @@ export const siteSlicer = createSlice({
     initialState: {
         appBg: '',
         url:'',
+        trade: false,
+        donate: false,
     },
     reducers: {
         clearUrl: (state, action) => {
@@ -13,15 +15,20 @@ export const siteSlicer = createSlice({
             return 'teste';
 
         },
-        // encodeUrl: (state, action) => {
-        //     // É só pra eu lembrar como funciona isso.
-        //     console.log(state.tools.encoder.encode(action.payload.url).join())
-        // }
+        toggleTD: (state, action) => {
+            if(action.payload.type === 'Troca') {
+                state.trade = !state.trade;
+            }else{
+                state.donate = !state.donate;
+            }
+        },
+
     }
 
 });
 
 export const {setTeste} = siteSlicer.actions;
+export const {toggleTD} = siteSlicer.actions;
 export const {clearUrl} = siteSlicer.actions;
 
 export default siteSlicer.reducer;

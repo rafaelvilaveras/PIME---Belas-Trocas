@@ -1,7 +1,7 @@
 .p-page {
     width: 100%;
     max-width: 1560px;
-    height: 83vh;
+    min-height: 83vh;
     justify-content: center;
     align-items: center;
     background-color: var(--light-gray-bg);

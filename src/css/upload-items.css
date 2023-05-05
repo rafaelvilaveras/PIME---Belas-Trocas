@@ -1,0 +1,46 @@
+.ci-container {
+    width: 90%;
+    min-height: 83vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.ci-content {
+    width: 70%;
+}
+
+.ci-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--white-font);
+    background-color: var(--blue-bg);
+    text-align: center;
+    border-radius: 1rem;
+    padding: 0.25rem;
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+}
+
+.ci-form {
+    width: 100%;
+    align-items: center;
+    gap: 1rem;
+}
+
+.ci-form-content {
+    width: 100%;
+    gap: 1rem;
+}
+
+.ci-inputs {
+    width: 80%;
+    gap: 1rem;
+}
+
+.ci-img-container {
+    width: 20%;
+}
+
+.ci-img-container input {
+    width: 100%;
+}

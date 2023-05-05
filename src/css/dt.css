@@ -1,0 +1,115 @@
+.trade-container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--black-bg);
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+}
+
+.trade-content {
+    width: 75%;
+    max-width: 1560px;
+    background-color: white;
+    padding: 1rem;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    border-radius: 1rem;
+}
+
+.ti-close-button {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+
+.trade-items {
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.ti-displayer {
+    width: 25%;
+    height: 45vh;
+    max-height: 20rem;
+    justify-content: space-around;
+    gap: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+}
+
+.ti-displayer span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ti-img-container {
+    display: flex;
+    max-width: 15rem;
+    max-height: 15rem;
+}
+
+.ti-img-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.trade-button {
+    color: var(--white-font);
+    padding: 0.25rem 0.5rem;
+    font-size: 1.75rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.my-trade-items {
+    width: 100%;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+.my-items {
+    width: 75%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.my-items-icon {
+    color: var(--white-font);
+    font-size: 1.25rem;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.donate-content {
+    padding: 2rem 1.5rem;
+}
+
+.donate-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.donate-button {
+    padding: 0.5rem 1.5rem;
+    background-color: var(--purple-font);
+    font-weight: bold;
+    color: var(--white-font);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
