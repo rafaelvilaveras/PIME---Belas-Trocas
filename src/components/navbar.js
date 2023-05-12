@@ -18,7 +18,7 @@ const Navbar = ({userInfo}) => {
 
     const location = useLocation();
     const codintionP = (location.pathname === '/entrar') || (location.pathname === '/cadastro')
-    const logged = true;
+    const logged = false;
     const [userMenu, toggleUM] = useState(false);
     const [nb, toggleNB] = useState(false);
 

@@ -40,7 +40,7 @@ const CompareInput = ({type}) => {
                     ref={oiRef}
                     name={type.toUpperCase()}
                     className='c-input'
-                    type={type === 'password' ? see ? 'text' : 'password' : type }
+                    type={type === 'password' ? seeC ? 'text' : 'password' : type }
                     placeholder={portugues().toUpperCase()}
                     autoComplete={type === 'password' ? 'off' : ''}
                     onChange={(e)=>{
@@ -70,7 +70,7 @@ const CompareInput = ({type}) => {
                 <input
                     name={'C'+type.toUpperCase()}
                     className={valid === ('') ? 'c-input ': valid === true ? 'c-input c-true' : 'c-input c-false' }
-                    type={type === 'password' ? seeC ? 'text' : 'password' : type }
+                    type={type === 'password' ? see ? 'text' : 'password' : type }
                     placeholder={'CONFIRME '+portugues().toUpperCase()}
                     autoComplete={type === 'password' ? 'off' : ''}
                     onChange={(e)=>{
